@@ -93,9 +93,7 @@ char	*get_next_line(int fd)
 {
 	static char	*txt;
 	char		*line;
-	int			i;
 
-	i = 0;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	txt = read_it (fd, txt);
