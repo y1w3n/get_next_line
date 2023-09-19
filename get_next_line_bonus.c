@@ -110,3 +110,5 @@ char	*get_next_line(int fd)
 // 	printf("%d\n",fd);
 // 	printf("%s\n", s);
 // }
+
+/* put a memory space for char txt to sort out the memory.*/
