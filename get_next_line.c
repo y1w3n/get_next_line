@@ -110,3 +110,23 @@ char	*get_next_line(int fd)
 // 	printf("%d\n",fd);
 // 	printf("%s\n", s);
 // }
+
+/*
+	get_next_line -> first occurence of newline('\n') then print out the string before newline
+	**tmp is the temporary memory space 
+	**buffer size
+	three functions: 
+	1. read it -> 		read through the file, and put the content read into 'txt' 
+				include newline as well because of the buffer size define as 1024; depends on buffer size as well
+				use function strchr (read when I find newline, however, in this case doesn't apply)
+				use function strjoin (to join the str from file to tmp file)
+
+	2. extract it ->	extract the line from the file
+			 	use function strcpy (copy the line before newline to a tmp file)
+				when there is newline, extract before newline (reason for i + 2 as \n and \0), add newline after extracted
+
+	3. extract_liao ->	update the file after extracted the line from file
+				use i to check the position of before newline, use strlen of txt minus i to get the remainder, 
+				after that use strcpy to copy string from i+1 onwards
+				
+
